@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Footer({ setActiveTab, onResetDemo, onOpenBooking }) {
   const handleNav = (tab) => {
     setActiveTab(tab);
@@ -10,7 +8,7 @@ export function Footer({ setActiveTab, onResetDemo, onOpenBooking }) {
     <footer className="editorial-footer">
       <div className="content-container">
         <div className="footer-columns-grid">
-          {/* Brand Story */}
+          {/* 1: Brand Story */}
           <div>
             <div className="footer-brand-serif">
               ✦ PetPal
@@ -23,7 +21,7 @@ export function Footer({ setActiveTab, onResetDemo, onOpenBooking }) {
             </p>
           </div>
 
-          {/* Navigation Index */}
+          {/* 2: Navigation */}
           <div>
             <h4 className="footer-col-headline">Index</h4>
             <ul className="footer-nav-list">
@@ -32,6 +30,19 @@ export function Footer({ setActiveTab, onResetDemo, onOpenBooking }) {
               <li><button onClick={() => handleNav('pets')}>Companion Lookbook</button></li>
               <li><button onClick={() => handleNav('bookings')}>Appointment Ledger</button></li>
               <li><button onClick={() => onOpenBooking(null)}>Direct Reservation</button></li>
+            </ul>
+          </div>
+
+          {/* 3: Care Services */}
+          <div>
+            <h4 className="footer-col-headline">Featured Offerings</h4>
+            <ul className="footer-nav-list">
+              <li><button onClick={() => handleNav('services')}>The Pawlor — Vesu, Surat</button></li>
+              <li><button onClick={() => handleNav('services')}>Fur-st Clinic — City Light, Surat</button></li>
+              <li><button onClick={() => handleNav('services')}>Paws & Pillows — Piplod, Surat</button></li>
+              <li><button onClick={() => handleNav('services')}>Walkies with Wagh — Adajan, Surat</button></li>
+              <li><button onClick={() => handleNav('services')}>Sit Happens Academy — Ahmedabad</button></li>
+              <li><button onClick={() => handleNav('services')}>The Jhunjhunwala Store — Vadodara</button></li>
             </ul>
           </div>
         </div>
