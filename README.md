@@ -1,39 +1,78 @@
-# 🐾 PetPal – Pet Services Booking Platform
+# PetPal — Pet Care Management Platform
 
-PetPal is a modern, responsive web application built with React, HTML5, and custom CSS. It provides pet owners with a seamless platform to discover, filter, and book local pet care services—including grooming, veterinary consultations, pet boarding, and dog walking.
+A React-based web application for managing pet profiles, exploring care services, booking appointments, and tracking reservations.
 
----
+## Tech Stack
 
-## Features
+- **React 19** – Component-based UI
+- **Vite 8** – Development and build tool
+- **JavaScript (ES6+)** – Application logic
+- **HTML5 & CSS3** – Structure and styling
+- **React Hooks** – State and lifecycle management
+- **LocalStorage** – Client-side data persistence
 
-- **Service Category Filtering**: Filter top-rated local providers instantly by service type (Grooming, Veterinary, Boarding, Walking).
-- **Interactive Provider Cards**: View service pricing, customer ratings, locations, and service descriptions.
-- **Dynamic Booking Modal**: Modal-driven appointment scheduling with customizable pet profiles (Dog, Cat, Other), dates, and time slots.
-- **My Bookings Manager**: View active upcoming appointments with real-time status tracking and cancellation options.
-- **Playful & Friendly UI**: Custom CSS styling featuring pastel design tokens, glassmorphism navigation, soft shadows, and smooth card physics.
-
----
-
-
-
-## 📂 Project Structure
+## Project Structure
 
 ```text
 PetPal/
-├── public/                # Static assets and icons
+├── public/
 ├── src/
+│   ├── assets/
 │   ├── components/
-│   │   ├── Navbar.jsx           # Header navigation & booking counter badge
-│   │   ├── Hero.jsx             # Hero banner with branding title
-│   │   ├── ServiceFilter.jsx    # Category filter pills
-│   │   ├── ProviderCard.jsx     # Individual provider card UI
-│   │   ├── BookingModal.jsx     # Interactive booking modal form
-│   │   └── AppointmentsView.jsx # Active bookings manager view
+│   │   ├── HomeView.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── PetsView.jsx
+│   │   ├── PetModal.jsx
+│   │   ├── ServicesView.jsx
+│   │   ├── BookingModal.jsx
+│   │   ├── BookingView.jsx
+│   │   ├── ConfirmationModal.jsx
+│   │   ├── AuthModal.jsx
+│   │   └── Toast.jsx
 │   ├── data/
-│   │   └── petData.js           # Mock provider data and categories
-│   ├── App.jsx                  # Main application state and tab routing
-│   ├── index.css                # Global styles, variables, and animations
-│   └── main.jsx                 # Application entry point
-├── index.html             # HTML template root
-├── package.json           # Dependencies and scripts
-└── vite.config.js         # Vite configuration
+│   │   └── petData.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Key Features
+
+- Pet profile management with CRUD operations.
+- Service directory with search and category filters.
+- Appointment booking with date and time selection.
+- Booking history, cancellation, and rebooking.
+- Editable user profile.
+- LocalStorage-based data persistence.
+
+## Implementation
+
+- Functional React components and Hooks (`useState`, `useEffect`).
+- Props and component-based architecture.
+- Dynamic rendering using `map()` and `filter()`.
+- Conditional rendering for modals and booking statuses.
+- Responsive layouts using CSS Flexbox and Grid.
+
+## Getting Started
+
+```bash
+git clone <repository-url>
+cd PetPal
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173/`.
+
+## Build & Testing
+
+```bash
+npm run lint
+npm run build
+```
+
+**Note:** PetPal is a frontend-only academic project. No backend or external database is required.
