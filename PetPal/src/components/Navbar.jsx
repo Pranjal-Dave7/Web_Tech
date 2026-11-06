@@ -21,9 +21,12 @@ export function Navbar({
   };
 
   // Temporarily trimmed to 2 navigation items for initial commit
+  
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'services', label: 'Services' }
+    { id: 'services', label: 'Services' },
+    { id: 'pets', label: 'My Pets' },
+    { id: 'bookings', label: 'My Bookings', badge: upcomingCount }
   ];
 
   return (
